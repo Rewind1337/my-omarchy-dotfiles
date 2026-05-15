@@ -1,0 +1,13 @@
+{
+	"font_size": 13,
+	"theme": "Default Dark.sublime-theme",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"color_scheme": "Nord.sublime-color-scheme",
+	"dark_color_scheme": "Nord.sublime-color-scheme",
+	"light_color_scheme": "Nord.sublime-color-scheme",
+	"index_files": true,
+	"font_face": "CaskaydiaCove Nerd Font Mono",
+}

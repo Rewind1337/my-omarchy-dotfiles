@@ -1,0 +1,324 @@
+@import "../omarchy/current/theme/waybar.css";
+
+@define-color nord0 #2E3440;
+@define-color nord1 #3B4252;
+@define-color nord2 #434C5E;
+@define-color nord3 #4C566A;
+
+@define-color nord4 #D8DEE9;
+@define-color nord5 #E5E9F0;
+@define-color nord6 #ECEFF4;
+
+@define-color nord7 #8FBCBB;
+@define-color nord8 #88C0D0;
+@define-color nord9 #81A1C1;
+@define-color nord10 #5E81AC;
+
+@define-color nord11 #BF616A;
+@define-color nord12 #D08770;
+@define-color nord13 #EBCB8B;
+@define-color nord14 #A3BE8C;
+@define-color nord15 #B48EAD;
+
+* {
+  transition: background 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
+  background: @nord0;
+
+  text-shadow: 0 0 3px black;
+
+  border: none;
+  margin: 0;
+  border-radius: 0;
+  min-height: 0;
+  font-family: 'CaskaydiaMono Nerd Font';
+  font-size: 15px;
+}
+
+.modules-left, .modules-right  {margin: 0px;}
+
+#custom-cpu-usage-spark,
+#custom-gpu-usage-spark,
+#custom-ram-usage-spark,
+#custom-internet-down-spark,
+#custom-internet-up-spark,
+#custom-update,
+#custom-screenrecording-indicator,
+#custom-idle-indicator ,
+#custom-notification-silencing-indicator,
+#custom-voxtype {
+  letter-spacing: -1px;
+  min-width: 18px;
+  margin: 0 2px;
+  padding: 0 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 8px;
+  min-width: 12px;
+  margin-right: 4px;
+  border-bottom: 1px solid alpha(@foreground, 0.6);
+}
+
+#workspaces button * {background: transparent;}
+
+#custom-wayves-left, #custom-wayves-right {letter-spacing: -1px;}
+
+#clock,
+#custom-nico-widget,
+#mpris,
+#custom-nico-weather,
+#custom-wayves-left,
+#custom-wayves-right {
+  border-top: 1px solid @foreground;
+  padding: 0 8px;
+}
+
+#cpu,
+#pulseaudio,
+#network {
+  min-width: 12px;
+  padding: 0 12px;
+  padding-right: 16px;
+  margin-left: 4px;
+  border-bottom: 1px solid @foreground;
+}
+
+#tray {
+  padding: 0 4px;
+  border-bottom: 1px solid @foreground;
+  margin-left: 4px;
+}
+
+#tray > * {
+  padding: 0 8px;
+}
+
+#custom-expand-icon {
+  padding: 0 4px;
+  border-bottom: 1px solid @foreground;
+}
+
+#custom-omarchy {
+  padding: 0 9px;
+  border-bottom: 1px solid @foreground;
+  min-width: 12px;
+  margin-right: 4px;
+}
+
+#workspaces button:hover, #custom-omarchy:hover {
+  background: @nord3;
+}
+
+#workspaces button:hover *, #custom-omarchy:hover {
+  color: white;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#workspaces button:hover {
+  opacity: 1;
+}
+
+#workspaces button.active {
+  background: @nord1;
+  opacity: 1;
+}
+
+#workspaces button.active * {
+  color: white;
+}
+
+#workspaces button:not(.empty) {
+  border-bottom: 1px solid @foreground;
+}
+
+tooltip {
+  padding: 2px;
+  border: 1px solid alpha(@foreground, 0.66);
+}
+
+tooltip, tooltip *, tooltip label{
+  background: @nord0;
+  padding: 0;
+  margin: 0;
+}
+
+tooltip label {
+  padding: 6px 12px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+
+
+#taskbar button {
+  border-top: 1px solid alpha(@foreground, 0.5);
+  padding: 6px 8px;
+  margin: 0 2px;
+}
+
+#taskbar button * {
+  background: transparent;
+}
+
+
+
+menu {
+  padding: 0;
+}
+
+menu:hover {
+  background: @nord1;
+}
+
+menu, menuitem, label {
+  background: @nord0;
+}
+
+menuitem {
+  padding: 4px 0;
+  border: 1px solid @foreground;
+}
+
+menuitem:first-child {border-bottom: 0}
+menuitem:not(:first-child):not(:last-child) {border-top: 0; border-bottom: 0}
+menuitem:last-child {border-top: 0}
+
+menuitem label {
+
+}
+
+menuitem:hover, menuitem:hover label {
+  background: @nord1;
+  margin: 0;
+}
+
+
+
+#custom-update {
+  background: rgb(220, 90, 90);
+  color: white;
+  font-size: 18px;
+  padding-right: 11px;
+}
+
+#custom-update:hover {
+  background: rgb(230, 60, 60);
+  color: yellow;
+}
+
+#mpris,
+#custom-wayves-left,
+#custom-wayves-right {
+  text-shadow: -2px 0 3px alpha(@nord7, 1), 2px 0 3px alpha(@nord10, 1), 0 0 4px black, 0 0 6px black;
+}
+
+#mpris.paused {text-shadow: none;}
+
+#cpu,
+#pulseaudio,
+#network,
+#clock, 
+#custom-nico-widget, 
+#mpris,
+#custom-nico-weather, 
+#custom-wayves-left, 
+#custom-wayves-right,
+#custom-cpu-usage-spark,
+#custom-gpu-usage-spark,
+#custom-ram-usage-spark,
+#custom-internet-down-spark,
+#custom-internet-up-spark,
+#custom-update,
+#custom-screenrecording-indicator,
+#custom-idle-indicator ,
+#custom-notification-silencing-indicator,
+#custom-voxtype,
+#custom-color-tool-lighten,
+#custom-color-tool-middle,
+#custom-color-tool-darken,
+#custom-color-tool-random  {
+  background: @nord0;
+}
+
+#custom-color-tool-lighten,
+#custom-color-tool-middle,
+#custom-color-tool-darken,
+#custom-color-tool-random {
+  min-width: 30px;
+  padding: 0 8px;
+  border-top: 1px solid @foreground;
+  font-size: 32px;
+}
+
+#custom-screenrecording-indicator.active {color: @nord11;}
+#custom-idle-indicator.active {color: @nord12;}
+#custom-notification-silencing-indicator.active {color: @nord13;}
+
+#custom-notification-silencing-indicator:hover,
+#custom-idle-indicator:hover,
+#custom-screenrecording-indicator:hover {
+  color: white;
+}
+
+#cpu:hover,
+#pulseaudio:hover,
+#network:hover,
+#clock:hover, 
+#custom-nico-widget:hover, 
+#mpris:hover,
+#custom-nico-weather:hover, 
+#custom-wayves-left:hover, 
+#custom-wayves-right:hover,
+#custom-cpu-usage-spark:hover,
+#custom-gpu-usage-spark:hover,
+#custom-ram-usage-spark:hover,
+#custom-internet-down-spark:hover,
+#custom-internet-up-spark:hover,
+#custom-update:hover,
+#custom-screenrecording-indicator:hover,
+#custom-idle-indicator:hover ,
+#custom-notification-silencing-indicator:hover,
+#custom-voxtype:hover,
+#custom-color-tool-lighten:hover,
+#custom-color-tool-middle:hover,
+#custom-color-tool-darken:hover,
+#custom-color-tool-random:hover {
+  background: @nord1;
+}
+
+#taskbar button:hover {
+  background: @nord1;
+  border-top: 1px solid alpha(@foreground, 0.75);
+}
+
+#taskbar button.active {
+  background: @nord2;
+  border-top: 1px solid @foreground;
+}
+
+#taskbar button.active:hover{
+  background: @nord3;
+  border-top: 1px solid alpha(@foreground, 0.75);
+}
+
+#workspaces button:nth-child(4n + 1) {color: @nord7;}
+#workspaces button:nth-child(4n + 2) {color: @nord8;}
+#workspaces button:nth-child(4n + 3) {color: @nord9;}
+#workspaces button:nth-child(4n + 4) {color: @nord8;}
+
+#custom-cpu-usage-spark {color: @nord7;}
+#custom-gpu-usage-spark {color: @nord8;}
+#custom-ram-usage-spark {color: @nord9;}
+#custom-internet-down-spark {color: @nord8;}
+#custom-internet-up-spark {color: @nord7;}
+
+*:hover {
+  color: white;
+  text-shadow: 0 0 9px black,0 0 6px black, 0 0 3px white, 0 0 2px black;
+}
