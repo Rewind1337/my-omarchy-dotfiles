@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Youtube Music
+Comment=Youtube Music
+Exec=firefox -new-window "https://music.youtube.com/"
+Terminal=false
+Type=Application
+Icon=/home/rewind/.local/share/applications/icons/Youtube Music.png
+StartupNotify=true

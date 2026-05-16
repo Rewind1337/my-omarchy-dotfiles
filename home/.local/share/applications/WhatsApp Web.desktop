@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=WhatsApp Web
+Comment=WhatsApp Web
+Exec=firefox -new-window "https://web.whatsapp.com/"
+Terminal=false
+Type=Application
+Icon=/home/rewind/.local/share/applications/icons/WhatsApp Web.png
+StartupNotify=true

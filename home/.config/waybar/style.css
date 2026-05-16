@@ -106,35 +106,6 @@
   margin-right: 4px;
 }
 
-#workspaces button:hover, #custom-omarchy:hover {
-  background: @nord3;
-}
-
-#workspaces button:hover *, #custom-omarchy:hover {
-  color: white;
-}
-
-#workspaces button.empty {
-  opacity: 0.5;
-}
-
-#workspaces button:hover {
-  opacity: 1;
-}
-
-#workspaces button.active {
-  background: @nord1;
-  opacity: 1;
-}
-
-#workspaces button.active * {
-  color: white;
-}
-
-#workspaces button:not(.empty) {
-  border-bottom: 1px solid @foreground;
-}
-
 tooltip {
   padding: 2px;
   border: 1px solid alpha(@foreground, 0.66);
@@ -305,6 +276,32 @@ menuitem:hover, menuitem:hover label {
 #taskbar button.active:hover{
   background: @nord3;
   border-top: 1px solid alpha(@foreground, 0.75);
+}
+
+#workspaces button:hover, #custom-omarchy:hover {
+  background: @nord3;
+}
+
+#workspaces button.empty {
+  opacity: 0.66;
+}
+
+#workspaces button:hover {
+  opacity: 1;
+}
+
+#workspaces button.active {
+  background: @nord1;
+  opacity: 1;
+}
+
+#workspaces button:not(.empty) {
+  color: white;
+  border-bottom: 1px solid @foreground;
+}
+
+#workspaces button:not(.empty) *, #workspaces button.active * {
+  color: white;
 }
 
 #workspaces button:nth-child(4n + 1) {color: @nord7;}

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Evolve Idlegame
+Comment=Evolve Idlegame
+Exec=omarchy-launch-webapp "https://pmotschmann.github.io/Evolve/"
+Terminal=false
+Type=Application
+Icon=/home/rewind/.local/share/applications/icons/Evolve Idlegame.png
+StartupNotify=true

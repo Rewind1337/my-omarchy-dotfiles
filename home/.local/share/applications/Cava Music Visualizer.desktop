@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Cava Music Visualizer
+Comment=Cava Music Visualizer
+Exec=xdg-terminal-exec --app-id=TUI.float -e cava
+Terminal=false
+Type=Application
+Icon=/home/rewind/.local/share/applications/icons/Cava Music Visualizer.png
+StartupNotify=true

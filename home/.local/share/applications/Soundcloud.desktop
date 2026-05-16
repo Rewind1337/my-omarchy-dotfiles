@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Soundcloud
+Comment=Soundcloud
+Exec=firefox -new-window "https://soundcloud.com/"
+Terminal=false
+Type=Application
+Icon=/home/rewind/.local/share/applications/icons/Soundcloud.png
+StartupNotify=true

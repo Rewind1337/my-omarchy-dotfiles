@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Outlook E-Mail
+Comment=Outlook E-Mail
+Exec=firefox -new-window "https://outlook.live.com/mail/"
+Terminal=false
+Type=Application
+Icon=/home/rewind/.local/share/applications/icons/Outlook E-Mail.png
+StartupNotify=true
