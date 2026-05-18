@@ -46,7 +46,7 @@
       "format": "  {}",
       "tooltip": false,
       "exec": "mpstat -P ALL 1 1 | awk 'BEGIN{print \"0 100 \" } /Average:/ && $2 ~ /[0-9]/ {print 100 - $12} END{}' | spark | awk '{print substr($0, 3)}'",
-      "interval": 3,
+      "interval": 15,
       "return-type": "text"
     },
     "custom/gpu-usage-spark": {
@@ -60,21 +60,21 @@
       "format": "  {}",
       "tooltip": false,
       "exec": "free -h | awk 'NR==2 {gsub(/[A-Za-z]/, \"\", $2); gsub(/[A-Za-z]/, \"\", $3); gsub(/[A-Za-z]/, \"\", $6); print \"0, \"$2, $3, $6}' | spark | awk '{print substr($0, 3)}'",
-      "interval": 3,
+      "interval": 15,
       "return-type": "text"
     },
     "custom/internet-down-spark": {
       "format": "↡ {}",
       "tooltip": false,
-      "exec": "awk '{if(l1){print \"0 100 \" int(10 * ($2-l1)/1048576)} else{l1=$2; l2=$10;}}' <(grep wlan0 /proc/net/dev) <(sleep 1; grep wlan0 /proc/net/dev) | spark  | awk '{print substr($0, 3)}'",
-      "interval": 0,
+      "exec": "awk '{if(l1){print \"0 100 \" int(10 * ($2-l1)/1048576)} else{l1=$2; l2=$10;}}' <(grep wlan /proc/net/dev) <(sleep 1; grep wlan /proc/net/dev) | spark  | awk '{print substr($0, 3)}'",
+      "interval": 15,
       "return-type": "text"
     },
     "custom/internet-up-spark": {
       "format": "↟ {}",
       "tooltip": false,
-      "exec": "awk '{if(l1){print \"0 100 \" int(10 * ($10-l1)/1048576)} else{l1=$2; l2=$10;}}' <(grep wlan0 /proc/net/dev) <(sleep 1; grep wlan0 /proc/net/dev) | spark  | awk '{print substr($0, 3)}'",
-      "interval": 0,
+      "exec": "awk '{if(l1){print \"0 100 \" int(10 * ($10-l1)/1048576)} else{l1=$2; l2=$10;}}' <(grep wlan /proc/net/dev) <(sleep 1; grep wlan /proc/net/dev) | spark  | awk '{print substr($0, 3)}'",
+      "interval": 15,
       "return-type": "text"
     },
     "custom/omarchy": {
@@ -222,7 +222,7 @@
       "return-type": "text",
       "interval": 3600,
       "tooltip": false,
-      "on-click": "omarchy-launch-tui sh -c 'curl https://wttr.in;read x'" 
+      "on-click": "omarchy-launch-tui sh -c 'curl https://wttr.in/;read x'"
     },
     "custom/nico-widget": {
       "format": "ψ Nicos Cheats ψ",
@@ -282,6 +282,7 @@
       "status-icons": {
         "paused": "[⏸]"
       },
+      // "ignored-players": ["firefox"]
     }
   }
 ]
